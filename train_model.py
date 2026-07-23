@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import pandas as pd
 import joblib
 
@@ -48,7 +48,6 @@ joblib.dump(model, "diabetes_model.pkl")
 # Save the scaler
 joblib.dump(scaler, "scaler.pkl")
 
-=======
 import pandas as pd
 import joblib
 
@@ -98,5 +97,5 @@ joblib.dump(model, "diabetes_model.pkl")
 # Save the scaler
 joblib.dump(scaler, "scaler.pkl")
 
->>>>>>> 2469b3ac6ffacf186566d51c6412ea74ad5a1338
+
 print("\nModel and Scaler saved successfully!")
