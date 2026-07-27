@@ -152,7 +152,7 @@ python train_model.py
 
 ## 👩‍💻 Author
 
-**Siya Randhe**
+**Riya randhe**
 
 Diploma in Computer Engineering
 
