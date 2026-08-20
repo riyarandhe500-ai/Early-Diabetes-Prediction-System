@@ -11,12 +11,11 @@ from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 
 # Load Dataset
-df = pd.read_csv("diabetes.csv")
+df = pd.read_csv("balanced_diabetes.csv")
 
 # Features and Target
 X = df.drop("Outcome", axis=1)
 y = df["Outcome"]
-
 # Split Dataset
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42

@@ -17,6 +17,13 @@ print(df.describe())
 # Diabetic and Non-Diabetic count
 print(df["Outcome"].value_counts())
 
+# Check whether the dataset is balanced
+print("\nClass Distribution:")
+print(df["Outcome"].value_counts())
+
+print("\nClass Distribution Percentage:")
+print(df["Outcome"].value_counts(normalize=True) * 100)
+
 # ----------------------------
 # Graph 1: Outcome Count
 # ----------------------------

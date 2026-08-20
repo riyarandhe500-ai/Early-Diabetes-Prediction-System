@@ -10,7 +10,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 
 # Load Dataset
-df = pd.read_csv("diabetes.csv")
+df = pd.read_csv("balanced_diabetes.csv")
 
 # Features and Target
 X = df.drop("Outcome", axis=1)
@@ -22,12 +22,22 @@ X_train, X_test, y_train, y_test = train_test_split(
     test_size=0.2,
     random_state=42
 )
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
 # Models
 models = {
     "Logistic Regression": LogisticRegression(max_iter=1000),
     "Decision Tree": DecisionTreeClassifier(random_state=42),
-    "Random Forest": RandomForestClassifier(random_state=42),
+    "Random Forest": RandomForestClassifier(
+    n_estimators=50,
+    max_depth=None,
+    random_state=42
+),
     "KNN": KNeighborsClassifier(),
     "SVM": SVC()
 }
